@@ -1,9 +1,39 @@
 version: '3'
 services:
+  #PHP Service
   backend-laravel:
     build: ./backend-laravel
     volumes:
-      - ./backend-laravel:/usr/app
+      - ./backend-laravel:/app
     ports:
       - 8000:8000
-    command: composer install && php artisan serve --host=0.0.0.0 --port=8000
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    depends_on:
+      - mysql_db
+    networks:
+      - mynetwork
+  #MySQL Service
+  mysql_db:
+    # image: mysql:5.7.22
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel_docker
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - ./mysql_db/dbdata:/var/lib/mysql
+    networks:
+      - mynetwork
+  #Adminer
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - 8001:8080
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+    driver: bridge
