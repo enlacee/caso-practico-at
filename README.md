@@ -45,9 +45,9 @@ información de los promotores y validadores que atendieron dichas transacciones
 
 6.- Accede al aplicativo web desde tu navegador:
 
-    * Backend (Laravel project): http://localhost:8000
-    * Backend (Utility-Adminer project): http://localhost:8001
-        - HOST: mysql_db
-        - PORT: 3306
-        - USER: root
-        - PASS: root
+* Backend (Laravel project): http://localhost:8000
+* Backend (Utility-Adminer project): http://localhost:8001
+    - HOST: mysql_db
+    - PORT: 3306
+    - USER: root
+    - PASS: root
