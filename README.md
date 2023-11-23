@@ -33,10 +33,24 @@
 6.- Accede al aplicativo web desde tu navegador:
 
 * Backend-Laravel: http://localhost:8000
-* Utility-Adminer: http://localhost:8001
-    - HOST: mysql_db
-    - PORT: 3306
-    - USER: root
-    - PASS: root
+    * Utility-Adminer: http://localhost:8001
+        - HOST: mysql_db
+        - PORT: 3306
+        - USER: root
+        - PASS: root
 * Backend-Node: http://localhost:3000
 
+
+
+// crear las tablas
+php artisan migrate
+
+// llena las tablas de data
+php artisan migrate --seed
+
+
+### Usefull commands
+
+create seeders
+
+    php artisan make:seeder PlayerSeeder
