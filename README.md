@@ -16,13 +16,13 @@
 
 2.- Clone the repository in local env
 
-    git clone https://github.com/tu_usuario/repositoryName.git
+    git clone git@github.com:enlacee/caso-practico-at.git
 
-3.- Browser to the directory `repositoryName`
+3.- Move to `caso-practico-at` folder
 
-    cd repositoryName
+    cd caso-practico-at
 
-4.- Execute the next docker command:
+4.- Execute the next docker command: for building the containers
 
     docker-compose up --build
 
@@ -32,9 +32,11 @@
 
 6.- Accede al aplicativo web desde tu navegador:
 
-* Backend (Laravel project): http://localhost:8000
-* Backend (Utility-Adminer project): http://localhost:8001
+* Backend-Laravel: http://localhost:8000
+* Utility-Adminer: http://localhost:8001
     - HOST: mysql_db
     - PORT: 3306
     - USER: root
     - PASS: root
+* Backend-Node: http://localhost:3000
+

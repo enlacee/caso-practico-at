@@ -14,7 +14,7 @@ services:
       - mynetwork
   #MySQL Service
   mysql_db:
-    # image: mysql:5.7.22
+    # image: mysql:5.7
     image: mysql:latest
     restart: always
     environment:
@@ -32,6 +32,18 @@ services:
     restart: always
     ports:
       - 8001:8080
+    networks:
+      - mynetwork
+  #Node Service
+  backend-node:
+    build: ./backend-node
+    volumes:
+      - ./backend-node:/usr/app
+    ports:
+      - 3000:3000
+    command: sh -c "npm install && npm run start"
+    depends_on:
+      - mysql_db
     networks:
       - mynetwork
 networks:
