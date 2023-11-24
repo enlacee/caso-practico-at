@@ -69,8 +69,8 @@
 
 1. Codigo Fuente: https://github.com/enlacee/caso-practico-at
 
-2. Archivo con los script: [SQL](./docs/laravel_docker.sql)
-    Nota: este es un dump sql de las 4 tablas que se usan:
+2. Archivo con los script: [SQL](./docs/laravel_docker.sql)  
+Nota: este es un dump sql de las 4 tablas que se usan:
     - players
     - rols
     - transactions
