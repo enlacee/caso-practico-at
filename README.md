@@ -62,7 +62,7 @@
 
 ### Preview Project API-REST (player)
 
-[preview](./docs/thumbnail.png)
+![preview](./docs/thumbnail.png)
 
 
 ### Entregables Esperados
