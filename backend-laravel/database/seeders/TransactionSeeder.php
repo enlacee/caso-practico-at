@@ -43,7 +43,7 @@ class TransactionSeeder extends Seeder
             'voucher_amount' => '15',
             'voucher_bank_name' => 'bbva',
             'player_validador_id' => $player_validador_id,
-            'player_validador_status' => '0',
+            'player_validador_status' => '1',
             'created_at' => $now,
             'updated_at' => $now
         ]);

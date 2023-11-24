@@ -10,6 +10,10 @@ class Transaction extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'player_id', 'player_validador_id', 'voucher_amount', 'voucher_bank_name', 'player_validador_status'
+    ];
+
     /**
      * Get the player that belongs to the transaction.
      *

@@ -58,6 +58,12 @@ class PlayersController extends Controller
      */
     public function destroy(string $id)
     {
-        return Player::find($id)->delete();
+        $player = Player::find($id);
+
+        if (!$player) {
+            return response()->json(['message' => 'Player not found'], 404);
+        }
+
+        return $player->delete();
     }
 }

@@ -30,7 +30,7 @@
 
     docker exec -i -t <container-id> /bin/sh
 
-6.- Accede al aplicativo web desde tu navegador:
+6.- Access to the web app
 
 * Backend-Laravel: http://localhost:8000
     * Utility-Adminer: http://localhost:8001
@@ -40,17 +40,44 @@
         - PASS: root
 * Backend-Node: http://localhost:3000
 
+7.- Execute the next command for:
+
+1. Install tables:
+
+    docker exec -it <container-id> php artisan migrate
+    # docker exec -it <container-id> php artisan migrate:refresh
+
+2. Fill data:
+
+    docker exec -it <container-id> php artisan migrate --seed
 
 
-// crear las tablas
-php artisan migrate
 
-// llena las tablas de data
-php artisan migrate --seed
+### Resources webDeveloper
+
+[Postman Collection here](./docs/postman-collection/Caso-Practico-API-REST.postman_collection.json)
 
 
-### Usefull commands
 
-create seeders
+### Entrgables Esperados
 
-    php artisan make:seeder PlayerSeeder
+1. Cofdigo Fuente: https://github.com/enlacee/caso-practico-at
+
+2. Archivo con los script: [SQL](./docs/laravel_docker.sql)
+    Nota: este es un dump sql de las 4 tablas que se usan:
+    - players
+    - rols
+    - transactions
+    - promotor_comunications
+
+3. Usuarios y perfiles usados
+
+Usuarios (yo  los llame players)
+
+![usuarios](./docs/players.table.png)
+
+
+
+Perfiles (yo  los llame rols)
+
+![rols](./docs/roles.table.png)
