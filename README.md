@@ -44,24 +44,25 @@
 
 1. Install tables:
 
+```bash
     docker exec -it <container-id> php artisan migrate
-    # docker exec -it <container-id> php artisan migrate:refresh
+    ;docker exec -it <container-id> php artisan migrate:refresh
+```
 
 2. Fill data:
 
+```bash
     docker exec -it <container-id> php artisan migrate --seed
-
-
+```
 
 ### Resources webDeveloper
 
 [Postman Collection here](./docs/postman-collection/Caso-Practico-API-REST.postman_collection.json)
 
 
-
 ### Entrgables Esperados
 
-1. Cofdigo Fuente: https://github.com/enlacee/caso-practico-at
+1. Codigo Fuente: https://github.com/enlacee/caso-practico-at
 
 2. Archivo con los script: [SQL](./docs/laravel_docker.sql)
     Nota: este es un dump sql de las 4 tablas que se usan:
@@ -72,12 +73,8 @@
 
 3. Usuarios y perfiles usados
 
-Usuarios (yo  los llame players)
-
+Usuarios: yo los llame **players**
 ![usuarios](./docs/players.table.png)
 
-
-
-Perfiles (yo  los llame rols)
-
+Perfiles: yo los llame **rols**
 ![rols](./docs/roles.table.png)
