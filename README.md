@@ -60,7 +60,12 @@
 [Postman Collection here](./docs/postman-collection/Caso-Practico-API-REST.postman_collection.json)
 
 
-### Entrgables Esperados
+### Preview Project API-REST (player)
+
+[preview](./docs/thumbnail.png)
+
+
+### Entregables Esperados
 
 1. Codigo Fuente: https://github.com/enlacee/caso-practico-at
 
